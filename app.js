@@ -544,5 +544,5 @@ function initAnimatedTitle() {
   }
 
   updateTitleAndFavicon(); // Set immediately
-  setInterval(updateTitleAndFavicon, 1000);
+  setInterval(updateTitleAndFavicon, 3000);
 }
