@@ -520,6 +520,7 @@ function initAnimatedTitle() {
     "M. JAHANZAIB | UNB GRAD"
   ];
   const favicons = ["⚡", "📈", "🏆", "💻"];
+  const faviconUrls = favicons.map(emoji => `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${emoji}</text></svg>`);
   let stateIndex = 0;
 
   // Create or reuse a dynamic favicon link element
@@ -531,8 +532,14 @@ function initAnimatedTitle() {
   }
 
   function updateTitleAndFavicon() {
-    document.title = titles[stateIndex];
-    faviconEl.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${favicons[stateIndex]}</text></svg>`;
+    const nextTitle = titles[stateIndex];
+    const nextFavicon = faviconUrls[stateIndex];
+
+    requestAnimationFrame(() => {
+      faviconEl.href = nextFavicon;
+      document.title = nextTitle;
+    });
+
     stateIndex = (stateIndex + 1) % titles.length;
   }
 
