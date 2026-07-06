@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M. JAHANZAIB — AI & FINTECH BUILDER | EQUITY RESEARCH ANALYST</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Muhammad Jahanzaib. AI & Fintech Builder, Equity Research Analyst, and Frank H. Sobey Award Recipient. Empowering students and investors through technology in Atlantic Canada.">
+  <meta name="keywords" content="Muhammad Jahanzaib, Jahanzaib, Fintech, AI Builder, Equity Research, Frank H. Sobey Award, UNB Fredericton, J.D. Irving, Profitual, StonkSeeker, Fredericton, New Brunswick">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="M. JAHANZAIB — AI & FINTECH BUILDER">
+  <meta property="og:description" content="AI & Fintech Builder | Equity Research Analyst | Empowering Students & Investors Through Technology | Frank H. Sobey Award Recipient.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor Ring (Kaisei-style) -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- Background Canvas Particles -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo" id="logo-home">
+        M. JAHANZAIB
+        <div class="logo-dot"></div>
+      </a>
+      
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <button class="burger" id="menu-burger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Scrolling Marquee Text Loop under Header -->
+  <div class="marquee-container">
+    <div class="marquee-slide">
+      <span>✦ AI & Fintech Builder</span>
+      <span>✦ First-Gen Student at UNB</span>
+      <span>✦ Equity Research Analyst</span>
+      <span>✦ Frank H. Sobey Award Recipient</span>
+      <span>✦ Co-Creator of StonkSeeker</span>
+      <span>✦ AI & Fintech Builder</span>
+      <span>✦ First-Gen Student at UNB</span>
+      <span>✦ Equity Research Analyst</span>
+      <span>✦ Frank H. Sobey Award Recipient</span>
+      <span>✦ Co-Creator of StonkSeeker</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content" id="hero-text-container">
+          <div class="hero-subtitle" id="hero-sub">AI & Fintech Builder</div>
+          <h1 class="hero-title" id="hero-title-main">
+            MUHAMMAD<br class="br-sp"> JAHANZAIB
+          </h1>
+          <p class="hero-headline" id="hero-head" style="font-family: var(--font-display); font-size: clamp(1.5rem, 3.2vw, 2.8rem); color: var(--color-primary); margin-bottom: var(--space-xs); text-transform: uppercase; line-height: 1.1; letter-spacing: -0.02em;">
+            AI & FINTECH BUILDER<br>Based in Atlantic Canada
+          </p>
+          <p style="margin-bottom: var(--space-md); color: var(--text-muted); max-width: 620px;">
+            Hello, I’m a first-generation student at UNB, Equity Research Analyst, and Frank H. Sobey Award Recipient. 
+            Rather than just using models, I focus on building custom, automation-first tools to bridge the gap between institutional finance and applied AI.
+          </p>
+          <div class="cta-group" id="hero-ctas">
+            <a href="#projects" class="btn btn-primary" id="btn-view-work">View Projects</a>
+            <a href="#contact" class="btn btn-secondary" id="btn-connect">Let's Connect</a>
+          </div>
+        </div>
+        
+        <!-- Editorial Interactive Local Clock & Status Widget -->
+        <div class="hero-visual" id="hero-visual-container">
+          <div class="hero-editorial-widget">
+            
+            <!-- Time Block -->
+            <div class="widget-block">
+              <div class="widget-label">Local Time (Atlantic Canada)</div>
+              <div class="widget-clock">
+                <span class="localtime" id="fredericton-time">04:39</span>
+                <span class="widget-value" style="font-size: 14.6848px;">Fredericton, NB</span>
+              </div>
+            </div>
+
+            <!-- Status Block -->
+            <div class="widget-block">
+              <div class="widget-label">Status</div>
+              <div class="widget-value">
+                <span class="status-dot"></span>Available for Projects
+              </div>
+            </div>
+
+            <!-- Origin Block -->
+            <div class="widget-block">
+              <div class="widget-label">Origin & Base</div>
+              <div class="widget-value" style="font-size: 14.6848px;">
+                Roots in Karachi, Pakistan <br>
+                UNB Fredericton, NB, Canada
+              </div>
+            </div>
+
+            <!-- Languages Block -->
+            <div class="widget-block">
+              <div class="widget-label">Languages</div>
+              <div class="widget-value" style="font-size: 14.6848px;">
+                English (Fluent) <br>
+                Learning: French & Arabic
+              </div>
+            </div>
+
+            <!-- Recognition Badge -->
+            <div class="widget-block" style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="card-badge" style="font-size: 12px; padding: 4px 10px;">Sobey Laureate</span>
+              <i class="fa-solid fa-award" style="color: var(--color-primary); font-size: 1.2rem;"></i>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey / Identity Section -->
+  <section id="journey">
+    <div class="container">
+      <div class="section-header" id="journey-header">
+        <span class="section-label">Identity & Origin</span>
+        <h2 class="section-title">From Karachi to <span class="gradient-accent">Atlantic Canada</span></h2>
+      </div>
+      
+      <div class="journey-grid">
+        <!-- Interactive 3D Journey Map Card -->
+        <div class="journey-graphic" id="journey-graphic-container">
+          <div class="map-card" id="journey-map-card">
+            <div class="route-container">
+              
+              <!-- Karachi Node -->
+              <div class="location-node">
+                <div class="node-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                <div class="node-info">
+                  <h4>Karachi, Pakistan</h4>
+                  <p>Origin & Roots</p>
+                </div>
+              </div>
+              
+              <!-- Route Vector Path -->
+              <div class="route-line"></div>
+              
+              <!-- Fredericton Node -->
+              <div class="location-node primary">
+                <div class="node-icon"><i class="fa-solid fa-anchor"></i></div>
+                <div class="node-info">
+                  <h4>Fredericton, NB, Canada</h4>
+                  <p>Current Base & Future Focus</p>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="card-footer-info">
+              <span class="card-badge">Family Pioneer</span>
+              <span style="font-size: 13.6848px; color: var(--text-muted);">Established 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="journey-text" id="journey-text-content">
+          <div class="glass-panel" id="journey-panel">
+            <p style="margin-bottom: var(--space-xs);">
+              As the first in his family to leave Pakistan and attend university abroad, Muhammad chose the University of New Brunswick (UNB) and Atlantic Canada deliberately. He sought an environment that provided space to create, grow, and contribute.
+            </p>
+            <p>
+              Embracing Fredericton's balance and community, his long-term mission centers on fostering local growth — specifically aiding Atlantic Canadian entrepreneurs, underrepresented founders, and newcomers in achieving startup success and raising venture capital.
+            </p>
+            <div class="quote-bubble">
+              "You have space to breathe here. It's beautiful and summer in Fredericton is heaven."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header" id="exp-header">
+        <span class="section-label">Career Timeline</span>
+        <h2 class="section-title">Where Innovation Meets <span class="gradient-text">Operations</span></h2>
+      </div>
+      
+      <div class="timeline" id="exp-timeline">
+        
+        <!-- Experience 1: J.D. Irving -->
+        <div class="timeline-item" id="exp-item-jdi">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <h3>Accounting Associate</h3>
+                <a href="https://theorg.com/org/j-d-irving/org-chart/muhammad-jahanzaib" target="_blank" class="company hover-link">J.D. Irving, Transportation & Logistics</a>
+              </div>
+              <span class="duration">Current</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Applying modern AI integrations and automation tools to streamline complex, large-scale financial workflows.</li>
+                <li>Gaining critical exposure to logistics, operational accounting, and financial reporting systems within one of Canada's largest private conglomerates.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Experience 2: Profitual -->
+        <div class="timeline-item" id="exp-item-profitual">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <h3>Junior Fintech Business Lead</h3>
+                <a href="https://www.profitual.io" target="_blank" class="company hover-link">Profitual</a>
+              </div>
+              <span class="duration">June – Aug 2024</span>
+            </div>
+            <div class="timeline-body">
+              <p style="margin-bottom: var(--space-xs); font-style: italic; font-size: 14.6848px; color: var(--text-muted);">
+                Fintech startup founded by UNB alumni, helping 60+ clients raise $18.4 million.
+              </p>
+              <ul>
+                <li>Formulated and refined sophisticated financial models custom-built for small and medium enterprises (SMEs).</li>
+                <li>Conducted product demonstrations, onboarding corporate clients, and spearheaded successful project deliveries.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Experience 3: Student Investment Fund -->
+        <div class="timeline-item" id="exp-item-sif">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <h3>Equity Research Analyst</h3>
+                <a href="https://www.unb.ca/fredericton/management/cfs/sif.html" target="_blank" class="company hover-link">UNB Student Investment Fund (SIF)</a>
+              </div>
+              <span class="duration">Third Year</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Conducted deep-dive financial analysis, sector reviews, and equity research for the student-run investment fund.</li>
+                <li>Collaborated at the Centre for Financial Studies (CFS), translating raw data into actionable market theses.</li>
+                <li>Identified repetitive manual research routines, prompting the co-creation of the AI tool "StonkSeeker".</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4: Endowment Committee -->
+        <div class="timeline-item" id="exp-item-endowment">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-header">
+              <div class="job-meta">
+                <h3>Student Representative</h3>
+                <span class="company">UNB $450M Endowment & Investment Committees</span>
+              </div>
+              <span class="duration">2024 - Present</span>
+            </div>
+            <div class="timeline-body">
+              <ul>
+                <li>Represented the student body's interests on the university's $450M asset allocation and investment committees.</li>
+                <li>Collaborated alongside senior institutional partners and managers, including J.P. Morgan, reviewing portfolio performance and strategy.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Scrolling Grid) -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header" id="projects-header">
+        <span class="section-label">Interactive Builds</span>
+        <h2 class="section-title">Building Solutions for <span class="gradient-accent">Real Workflow Pain Points</span></h2>
+      </div>
+      
+      <!-- Horizontal Scrollable Cards Grid Container -->
+      <div class="projects-grid" id="projects-grid-container">
+        
+        <!-- Project 1: StonkSeeker -->
+        <div class="project-card glass-panel" id="project-stonkseeker">
+          <div class="project-card-top">
+            <span class="project-tag">AI & Fintech Product</span>
+            <h3>StonkSeeker</h3>
+            <p class="project-desc">
+              An AI-powered equity research companion designed to automate news scraping, summarization, and sentiment tracking. Real tools for real analysts.
+            </p>
+            <div class="project-metrics">
+              <div class="project-metrics-title">Key Impact Metrics</div>
+              <ul class="project-metrics-list">
+                <li>Beta saved hours weekly for student analysts.</li>
+                <li>Streamlined weekly market briefing summaries.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://stonkseeker.com" target="_blank" class="project-link hover-link">
+              stonkseeker.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/posts/jahanzaib21_ever-had-a-moment-when-everything-you-activity-7286107895249686528-E7jy" target="_blank" class="project-link hover-link" style="font-size: 13.6848px; color: var(--text-muted);">
+              Origin Story <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 2: Dextra -->
+        <div class="project-card glass-panel" id="project-dextra">
+          <div class="project-card-top">
+            <span class="project-tag">Bespoke Enterprise Tooling</span>
+            <h3>Dextra</h3>
+            <p class="project-desc">
+              AI-native assistant built for investment teams to automate the consolidation of earnings reports, broker notes, and financial news streams.
+            </p>
+            <div class="project-metrics">
+              <div class="project-metrics-title">Capabilities</div>
+              <ul class="project-metrics-list">
+                <li>Integrates with custom vector stores.</li>
+                <li>Extracts core thesis drivers from text.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-links">
+            <span class="project-link" style="color: var(--text-muted); font-style: italic;">
+              Proprietary Tooling
+            </span>
+          </div>
+        </div>
+        
+        <!-- Project 3: Automated Fund Reporting -->
+        <div class="project-card glass-panel" id="project-reporting">
+          <div class="project-card-top">
+            <span class="project-tag">Operations & Automation</span>
+            <h3>Automated Fund Reporting</h3>
+            <p class="project-desc">
+              A comprehensive financial operations pipeline that connects data feeds, reconciles multi-broker differences, and detects formatting anomalies.
+            </p>
+            <div class="project-metrics">
+              <div class="project-metrics-title">Outputs Supported</div>
+              <ul class="project-metrics-list">
+                <li>Dynamic investor PDFs & Excel sheets.</li>
+                <li>Immediate Slack ops digest alerts.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-links">
+            <span class="project-link" style="color: var(--text-muted); font-style: italic;">
+              Ops Infrastructure
+            </span>
+          </div>
+        </div>
+        
+        <!-- Project 4: Financial Literacy Startup -->
+        <div class="project-card glass-panel" id="project-literacy">
+          <div class="project-card-top">
+            <span class="project-tag">Social Impact Venture</span>
+            <h3>Financial Literacy Platform</h3>
+            <p class="project-desc">
+              A planned venture funded by the Sobey Award, targeting financial integration training and education programs for Canadian newcomers.
+            </p>
+            <div class="project-metrics">
+              <div class="project-metrics-title">Primary Focus Areas</div>
+              <ul class="project-metrics-list">
+                <li>Newcomer financial literacy training.</li>
+                <li>Venture capital access for minority founders.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project-links">
+            <span class="project-badge card-badge">In Early Planning</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Thought Leadership / Research Section -->
+  <section id="research">
+    <div class="container">
+      <div class="section-header" id="research-section-header">
+        <span class="section-label">Thought Leadership</span>
+        <h2 class="section-title">Researching the Frontier of <span class="gradient-text">AI Investing</span></h2>
+      </div>
+      
+      <div class="research-container">
+        <div class="research-text glass-panel" id="research-main-card">
+          <span class="project-tag">Case Study & Analysis</span>
+          <h3 class="research-title">How Minotaur Capital Is Using AI to Outperform the Market</h3>
+          <div class="research-author">
+            <span>By Muhammad Jahanzaib</span>
+            <span>Published ~2025</span>
+          </div>
+          
+          <div class="research-body">
+            <p>
+              Jahanzaib conducted a detailed study on Minotaur Capital's proprietary system, **"Taurient"**, mapping out how early-adopter investment funds successfully utilize LLMs at scale to capture market signals.
+            </p>
+            <div class="research-highlight">
+              <p>"AI doesn't replace the investor; it frees them up to think at a higher level, automating workflow tasks to scale intellectual leverage."</p>
+            </div>
+            <p>
+              His analysis underscores that success lies in embedding model variety, customized prompts, and benchmark metrics deep into daily pipelines, rather than merely treating AI as a surface-level chatbot.
+            </p>
+          </div>
+          
+          <div style="margin-top: var(--space-sm);">
+            <a href="https://www.linkedin.com/posts/jahanzaib21_hedge-fund-startup-that-replaced-analysts-activity-7311930175288410112-fFeE" target="_blank" class="btn btn-secondary hover-link" id="btn-read-research">
+              Read Analysis on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px;"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Metrics Grid -->
+        <div class="stats-grid" id="research-stats-grid">
+          
+          <div class="stat-item glass-panel">
+            <div class="stat-num">10K+</div>
+            <div class="stat-label">Model Calls / Day</div>
+          </div>
+          
+          <div class="stat-item glass-panel">
+            <div class="stat-num">+13.7%</div>
+            <div class="stat-label">Minotaur Return (6m)</div>
+          </div>
+          
+          <div class="stat-item glass-panel">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">LLMs Leveraged</div>
+          </div>
+          
+          <div class="stat-item glass-panel">
+            <div class="stat-num">~50%</div>
+            <div class="stat-label">Analyst Cost Saved</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header" id="skills-section-header">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title">Technical & Domain <span class="gradient-accent">Expertise</span></h2>
+      </div>
+      
+      <!-- Category Filter Tabs -->
+      <div class="skills-tabs" id="skills-tabs-container">
+        <button class="tab-btn active" data-filter="all">All Skills</button>
+        <button class="tab-btn" data-filter="ai-data">AI, ML & Data</button>
+        <button class="tab-btn" data-filter="finance">Finance & Ops</button>
+        <button class="tab-btn" data-filter="tech-cloud">Programming & Cloud</button>
+      </div>
+      
+      <!-- Skills Tag Cards Grid -->
+      <div class="skills-grid" id="skills-tags-grid">
+        <!-- AI/ML -->
+        <div class="skill-card glass-panel" data-category="ai-data">
+          <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="skill-name">Machine Learning</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="ai-data">
+          <div class="skill-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+          <div class="skill-name">AI Systems</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="ai-data">
+          <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="skill-name">LLM Integration</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="ai-data">
+          <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
+          <div class="skill-name">Workflows Automation</div>
+        </div>
+        
+        <!-- Programming/Data -->
+        <div class="skill-card glass-panel" data-category="tech-cloud">
+          <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+          <div class="skill-name">Python</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="tech-cloud">
+          <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="skill-name">R Programming</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="tech-cloud">
+          <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+          <div class="skill-name">SQL</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="ai-data">
+          <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="skill-name">Anomaly Detection</div>
+        </div>
+        
+        <!-- Analytics/Cloud -->
+        <div class="skill-card glass-panel" data-category="tech-cloud">
+          <div class="skill-icon"><i class="fa-solid fa-chart-simple"></i></div>
+          <div class="skill-name">Power BI & Tableau</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="tech-cloud">
+          <div class="skill-icon"><i class="fa-brands fa-microsoft"></i></div>
+          <div class="skill-name">Microsoft Azure</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="tech-cloud">
+          <div class="skill-icon"><i class="fa-brands fa-aws"></i></div>
+          <div class="skill-name">AWS & IBM Watson</div>
+        </div>
+        
+        <!-- Finance & Domain -->
+        <div class="skill-card glass-panel" data-category="finance">
+          <div class="skill-icon"><i class="fa-solid fa-calculator"></i></div>
+          <div class="skill-name">Financial Modeling</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="finance">
+          <div class="skill-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="skill-name">Equity Research</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="finance">
+          <div class="skill-icon"><i class="fa-solid fa-coins"></i></div>
+          <div class="skill-name">Fund Accounting</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="finance">
+          <div class="skill-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="skill-name">FinTech Operations</div>
+        </div>
+        <div class="skill-card glass-panel" data-category="finance">
+          <div class="skill-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div class="skill-name">SME Fundraising</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section (Solid Terracotta, flat border, no hover animations) -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card glass-panel" id="contact-main-card">
+        <span class="section-label">Connect</span>
+        <h2 class="contact-title">Let's Build Something Exceptional</h2>
+        <p class="contact-desc">
+          Interested in AI integrations, financial automation pipelines, or equity research models? Let's connect.
+        </p>
+        
+        <div class="cta-group" style="justify-content: center;">
+          <a href="mailto:soni8@unb.ca" class="btn btn-primary" id="contact-email">
+            <i class="fa-regular fa-envelope" style="margin-right: 10px;"></i> Send an Email
+          </a>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://linkedin.com/in/jahanzaib21" target="_blank" class="social-btn hover-link" aria-label="LinkedIn Profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/jaa_zi" target="_blank" class="social-btn hover-link" aria-label="Instagram Profile">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@Jazzy_talks" target="_blank" class="social-btn hover-link" aria-label="YouTube Channel">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.facebook.com/jahanzaib.naseem.9/" target="_blank" class="social-btn hover-link" aria-label="Facebook Profile">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <a href="#" class="footer-logo">
+        M. JAHANZAIB
+        <div class="logo-dot"></div>
+      </a>
+      
+      <!-- Footer Social Links -->
+      <div class="social-links" style="margin-top: 0;">
+        <a href="https://linkedin.com/in/jahanzaib21" target="_blank" class="social-btn" aria-label="LinkedIn Profile">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/jaa_zi" target="_blank" class="social-btn" aria-label="Instagram Profile">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@Jazzy_talks" target="_blank" class="social-btn" aria-label="YouTube Channel">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/jahanzaib.naseem.9/" target="_blank" class="social-btn" aria-label="Facebook Profile">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Muhammad Jahanzaib. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP Animation Core Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Script Controller -->
+  <script src="app.js"></script>
+</body>
+</html>
