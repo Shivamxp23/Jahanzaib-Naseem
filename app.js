@@ -514,10 +514,10 @@ function initGsapAnimations() {
    ========================================================================== */
 function initAnimatedTitle() {
   const titles = [
-    "⚡ M. JAHANZAIB | AI BUILDER",
-    "📈 M. JAHANZAIB | FINTECH BUILDER",
-    "🏆 M. JAHANZAIB | SOBEY LAUREATE",
-    "💻 M. JAHANZAIB | STUDENT @ UNB"
+    "M. JAHANZAIB | AI BUILDER",
+    "M. JAHANZAIB | FINTECH BUILDER",
+    "M. JAHANZAIB | SOBEY LAUREATE",
+    "M. JAHANZAIB | UNB GRAD"
   ];
   const favicons = ["⚡", "📈", "🏆", "💻"];
   let stateIndex = 0;
