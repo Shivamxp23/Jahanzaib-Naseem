@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize 3D Interactive Tilts
   if (!prefersReducedMotion) {
-    init3DTilt();
+
   }
 
   // Initialize Mobile Menu
@@ -186,44 +186,7 @@ function initCanvasParticles() {
   animate();
 }
 
-/* ==========================================================================
-   3. 3D Tilt Hover Effects (Subtle Editorial Tilt, No Contact card)
-   ========================================================================== */
-function init3DTilt() {
-  // Select tilt items (Excluding hero widget and contact card to match brand tone)
-  const cards = document.querySelectorAll('#journey-map-card, .project-card, .research-card');
 
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = ((centerY - y) / centerY) * 8;
-      const rotateY = ((x - centerX) / centerX) * 8;
-
-      gsap.to(card, {
-        rotateX: rotateX,
-        rotateY: rotateY,
-        transformPerspective: 1000,
-        ease: 'power1.out',
-        duration: 0.2
-      });
-    });
-
-    card.addEventListener('mouseleave', () => {
-      gsap.to(card, {
-        rotateX: 0,
-        rotateY: 0,
-        ease: 'power3.out',
-        duration: 0.6
-      });
-    });
-  });
-}
 
 /* ==========================================================================
    4. Mobile Navigation Menu
@@ -261,6 +224,11 @@ function initSkillsFilters() {
       tab.classList.add('active');
 
       const filter = tab.getAttribute('data-filter');
+      
+      const grid = document.getElementById('skills-tags-grid');
+      if (grid) {
+        grid.className = 'skills-grid filter-' + filter;
+      }
 
       gridItems.forEach(item => {
         const cat = item.getAttribute('data-category');
@@ -551,10 +519,23 @@ function initAnimatedTitle() {
     "🏆 M. JAHANZAIB | SOBEY LAUREATE",
     "💻 M. JAHANZAIB | STUDENT @ UNB"
   ];
+  const favicons = ["⚡", "📈", "🏆", "💻"];
   let stateIndex = 0;
 
-  setInterval(() => {
+  // Create or reuse a dynamic favicon link element
+  let faviconEl = document.querySelector("link[rel='icon']");
+  if (!faviconEl) {
+    faviconEl = document.createElement('link');
+    faviconEl.rel = 'icon';
+    document.head.appendChild(faviconEl);
+  }
+
+  function updateTitleAndFavicon() {
     document.title = titles[stateIndex];
+    faviconEl.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${favicons[stateIndex]}</text></svg>`;
     stateIndex = (stateIndex + 1) % titles.length;
-  }, 1000); // Refreshes every 1 second
+  }
+
+  updateTitleAndFavicon(); // Set immediately
+  setInterval(updateTitleAndFavicon, 1000);
 }

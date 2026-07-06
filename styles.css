@@ -95,6 +95,13 @@ body {
   background-color: var(--bg-light);
 }
 
+/* Hide native cursor on pointer devices (desktops/laptops) */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
 /* Custom Kaisei Sadatoki-style Pointer Cursor */
 .custom-cursor {
   width: 50px;
@@ -503,7 +510,6 @@ header {
 .journey-graphic {
   position: relative;
   height: 350px;
-  perspective: 1200px;
 }
 
 .map-card {
@@ -514,8 +520,7 @@ header {
   border: var(--border-width) solid var(--color-border);
   position: relative;
   overflow: hidden;
-  transform: rotateX(8deg) rotateY(-8deg);
-  transform-style: preserve-3d;
+
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
@@ -526,7 +531,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  transform: translateZ(30px);
+
 }
 
 .location-node {
@@ -599,7 +604,7 @@ header {
   content: '';
   position: absolute;
   top: 0;
-  left: 6px;
+  left: 7px;
   width: 1px;
   height: 100%;
   border-left: 1px dashed var(--color-primary);
@@ -608,7 +613,6 @@ header {
 .timeline-item {
   position: relative;
   margin-bottom: var(--space-lg);
-  perspective: 1200px;
 }
 
 .timeline-item:last-child {
@@ -617,7 +621,7 @@ header {
 
 .timeline-dot {
   position: absolute;
-  left: -41px;
+  left: calc(-1 * var(--space-md) + 1px);
   top: 24px;
   width: 12px;
   height: 12px;
@@ -628,13 +632,9 @@ header {
   transition: all 0.3s;
 }
 
-.timeline-item:hover .timeline-dot {
-  background-color: var(--color-primary);
-  transform: scale(1.2);
-}
+
 
 .timeline-content {
-  transform-style: preserve-3d;
 }
 
 .timeline-header {
@@ -912,6 +912,12 @@ header {
   min-height: 250px;
 }
 
+.skills-grid.filter-ai-data,
+.skills-grid.filter-finance {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
+  justify-content: center;
+}
+
 .skill-card {
   padding: var(--space-sm);
   background: var(--bg-card);
@@ -925,9 +931,7 @@ header {
   gap: var(--space-xs);
 }
 
-.skill-card:hover {
-  border-color: var(--color-primary);
-}
+
 
 .skill-icon {
   width: 44px;
@@ -1157,12 +1161,8 @@ footer .social-btn:hover {
     transform: rotate(45deg) translate(-5px, -6px);
   }
   
-  .timeline::before {
-    left: 4px;
-  }
-  .timeline-dot {
-    left: -43px;
-  }
+
+
   .duration {
     width: 100%;
     text-align: center;
